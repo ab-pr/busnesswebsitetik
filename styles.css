@@ -17,6 +17,40 @@ body, html {
 }
 
 /* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.322); /* Semi-transparent black background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* Reduced padding to make the bar thinner */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    color: #333; /* Adjust as needed */
+}
+
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -44,6 +78,46 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--highlight-color);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 30px; /* Adjusted height to make the bar thinner */
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 1.2em; /* Adjusted font size */
+    font-weight: bold;
+    color: #fff; /* White text color */
+}
+
+.navbar-right {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-right: 20px; /* Added padding to the right */
+}
+
+.navbar-right li {
+    margin-left: 20px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: #fff; /* White text color */
+    transition: color 0.3s;
+}
+
+.navbar-right a:hover {
+    color: #4CFF50; /* Adjust as needed */
 }
 
 /* Hero Section */
@@ -146,3 +220,60 @@ nav ul li a:hover {
     border-radius: 10px;
     margin-bottom: 15px;
 }
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes highlight_green {
+  0% {
+    color: #a3ffba;
+    text-shadow: none;
+  }
+  50% {
+    color: #4CFF50;
+    text-shadow: 0 0 20px #4CFF50;
+  }
+  100% {
+    color: #a3ffba;
+    text-shadow: none;
+  }
+}
+
+.highlight_green {
+  animation: highlight_green 2s infinite;
+}
+
+@keyframes highlight_green {
+    0% {
+      color: #a3ffba;
+      text-shadow: none;
+    }
+    50% {
+      color: #4CFF50;
+      text-shadow: 0 0 20px #4CFF50;
+    }
+    100% {
+      color: #a3ffba;
+      text-shadow: none;
+    }
+  }
+  
+  .highlight_green {
+    animation: highlight_green 2s infinite;
+  }

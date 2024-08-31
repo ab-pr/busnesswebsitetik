@@ -23,3 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
         appearOnScroll.observe(fader);
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.fade-in');
+
+    const options = {
+        root: null, // use the viewport as the root
+        threshold: 0.1, // trigger when 10% of the element is in view
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
