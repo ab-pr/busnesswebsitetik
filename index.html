@@ -6,21 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindset Academy</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-left">
-            <img src="logo.png" alt="Logo" class="logo">
+            <img src="images/icon.png" alt="Logo" class="logo">
             <span class="brand-name">Mindset Academy</span>
         </div>
-        <ul class="navbar-right">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="navbar-right">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<script src="script.js"></script>
     </nav>
 
     <!-- Main Section -->
@@ -33,27 +50,13 @@
             <a href="#categories" class="btn">Learn more</a>
         </div>
         <div class="hero-image">
-            <img src="images/card.png" alt="Oasis Logo">
+            <img src="images/card.png" alt="Oasis Logo" class="move-right" style="width: 100%; height: auto;">
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section id="categories" class="category-section">
-        <div class="container">
-            <h2>Book Categories</h2>
-            <div class="category-grid">
-                <div class="category">
-                    <a href="health.html" class="btn-category">Health</a>
-                </div>
-                <div class="category">
-                    <a href="money.html" class="btn-category">Money</a>
-                </div>
-                <div class="category">
-                    <a href="programming.html" class="btn-category">Programming</a>
-                </div>
-                <!-- Add more categories as needed -->
-            </div>
-        </div>
+    <!-- About Me Section -->
+    <section id="about-me" class="about-me-section">
+
     </section>
 
 </body>
