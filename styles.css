@@ -12,82 +12,25 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
     color: var(--text-color-primary);
 }
 
-/* Navigation Bar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.322); /* Semi-transparent black background */
-    backdrop-filter: blur(10px); /* Blur effect */
-    z-index: 1000; /* Ensure it stays on top of other elements */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px; /* Reduced padding to make the bar thinner */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-}
-
-.navbar li {
-    display: inline;
-}
-
-.navbar a {
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    color: #333; /* Adjust as needed */
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 30px; /* Adjusted height to make the bar thinner */
-    margin-right: 30px;
-}
-
-.brand-name {
-    font-size: 1.2em; /* Adjusted font size */
+/* Background Styles */
+body {
+    background-color: #3d464b; /* Fallback color */
+    background-image: url('images/gradient_pc.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "Century Gothic", Arial, sans-serif;
     font-weight: bold;
-    color: #fff; /* White text color */
 }
 
-.navbar-right {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.navbar-right li {
-    margin-left: 20px; /* Adjust the value as needed */
-}
-
-.move-right {
-    margin-left: 10%; /* Adjust the value as needed */
-    animation: bob 2s infinite; /* Apply the bobbing animation */
-}
-
-@keyframes bob {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px); /* Adjust the value as needed */
+/* Mobile Background */
+@media (max-width: 768px) {
+    body {
+        background-image: url('images/gradient_mobile.png');
     }
 }
 
@@ -96,8 +39,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 10%;
-    background: linear-gradient(45deg, var(--background-color), #333); /* Dark gradient background */
+    padding: 0px 10%;
     min-height: 100vh;
 }
 
@@ -121,6 +63,19 @@ body, html {
     margin-bottom: 30px;
 }
 
+.hero-image {
+    animation: bob 2s infinite;
+}
+
+@keyframes bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 .btn {
     padding: 10px 20px;
     background-color: var(--accent-color);
@@ -132,6 +87,22 @@ body, html {
 
 .btn:hover {
     background-color: var(--highlight-color);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
 }
 
 /* Category Section */
@@ -233,29 +204,4 @@ body, html {
 
 .highlight_blue {
   animation: highlight_blue 2s infinite;
-.navbar li {
-    display: inline;
 }
-
-.navbar a {
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    color: #fff; /* Changed to white for better visibility */
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 30px; /* Adjusted height to make the bar thinner */
-    margin-right: 30px;
-}
-
-.brand-name {
-    font-size: 1.2em; /* Adjusted font size */
-    font-weight: bold;
-    color: #fff; /* White text color */
-}}
