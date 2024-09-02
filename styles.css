@@ -61,8 +61,8 @@ body {
     transition: transform 0.09s ease;
 }
 
-/* Basic Reset */
-* {
+
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -415,7 +415,7 @@ body {
 }
 
 .section-title {
-    font-size: 2.5em;
+    font-size: 4.5em;
     color: var(--highlight-color);
     margin-bottom: 40px; /* Ensure proper margin */
 }
@@ -432,7 +432,7 @@ body {
     background-color: rgba(0, 0, 0, 0.281);
     padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Add filter to transition */
     width: 40%; /* Increase the width of the genre items */
     max-width: 340px; /* Increase the maximum width for the genre items */
     display: flex;
@@ -442,7 +442,10 @@ body {
 
 .genre-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff)
+            drop-shadow(0 0 7px #fff) drop-shadow(0 0 10px #ffbb00)
+            drop-shadow(0 0 17px #ffbb00) drop-shadow(0 0 20px #ffbb00)
+            drop-shadow(0 0 25px #ffbb00) drop-shadow(0 0 35px #ffbb00);
 }
 
 .genre-image {
