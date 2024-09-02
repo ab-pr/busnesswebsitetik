@@ -11,6 +11,7 @@
 
 /* General Styles */
 body, html {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -58,13 +59,6 @@ body {
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: transform 0.09s ease;
-}
-
-/* Prevent scrolling */
-html, body {
-    height: 100%;
-    overflow: hidden;
-    margin: 0;
 }
 
 /* Basic Reset */
@@ -327,7 +321,7 @@ html, body {
     align-items: center;
     justify-content: center;
     padding: 50px 20px;
-    background-color: #435a6823;
+    background-color: #0000005d;
     min-height: calc(100vh - 60px); /* Adjust height considering the navbar */
     color: var(--text-color-primary);
 }
@@ -360,4 +354,120 @@ html, body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--text-color-primary);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--highlight-color);
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--highlight-color);
+}
+
+.faq-answer {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Library Section */
+/* Ensure the section covers the full viewport */
+.library-section {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color); /* Replace with your desired background */
+    position: relative; /* Needed if the background is absolutely positioned */
+    padding: 0;
+    margin: 0;
+}
+
+/* Make the genre grid take full width and height */
+.genre-grid {
+    width: 100%;
+    height: 100%;
+    background-image: url('path/to/your/background-image.jpg'); /* Replace with your background image */
+    background-size: cover; /* Ensures the background covers the entire div */
+    background-position: center; /* Centers the background image */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    padding: 0; /* Remove any default padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width/height */
+}
+
+/* Optional: if you want some transparency */
+.genre-grid {
+    background-color: rgba(0, 0, 0, 0.534); /* Slightly transparent overlay */
+/* wider and longer */
+    width: 90%;
+    height: 70%;
+
+    border-radius: 10px;
+}
+
+.genre-item {
+    background-color: #ffffff11;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+
+.genre-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.genre-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.genre-name {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--text-color-primary);
 }

@@ -25,3 +25,12 @@ document.addEventListener('mousemove', (e) => {
         glowElement.style.transform = `translate(${e.clientX - offsetX}px, ${e.clientY - offsetY}px)`;
     }
 });
+
+window.onload = function() {
+    if (window.location.hash) {
+        var element = document.getElementById(window.location.hash.substring(1));
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+};
