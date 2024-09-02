@@ -405,54 +405,39 @@ body {
 
 
 
+
+
 /* Library Section */
-/* Ensure the section covers the full viewport */
 .library-section {
-    min-height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--background-color); /* Replace with your desired background */
-    position: relative; /* Needed if the background is absolutely positioned */
-    padding: 0;
-    margin: 0;
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    text-align: center;
 }
 
-/* Make the genre grid take full width and height */
-.genre-grid {
-    width: 100%;
-    height: 100%;
-    background-image: url('path/to/your/background-image.jpg'); /* Replace with your background image */
-    background-size: cover; /* Ensures the background covers the entire div */
-    background-position: center; /* Centers the background image */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center; /* Center items vertically */
-    padding: 0; /* Remove any default padding */
-    box-sizing: border-box; /* Ensure padding doesn't affect the width/height */
+.section-title {
+    font-size: 2.5em;
+    color: var(--highlight-color);
+    margin-bottom: 40px; /* Ensure proper margin */
 }
 
-/* Optional: if you want some transparency */
-.genre-grid {
-    background-color: rgba(0, 0, 0, 0.534); /* Slightly transparent overlay */
-/* wider and longer */
-    width: 90%;
-    height: 70%;
-
-    border-radius: 10px;
+.genre-row {
+    display: flex;
+    justify-content: center; /* Center the items */
+    gap: 10px; /* Reduce the gap between items */
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
 .genre-item {
-    background-color: #ffffff11;
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.281);
     padding: 20px;
-    text-align: center;
-    width: 200px;
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    color: var(--text-color-primary);
+    width: 40%; /* Increase the width of the genre items */
+    max-width: 340px; /* Increase the maximum width for the genre items */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .genre-item:hover {
@@ -460,14 +445,22 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.genre-image img {
+.genre-image {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+    max-width: 340px; /* Adjust the maximum width to match the container */
+    max-height: 340px; /* Adjust the maximum height to match the container */
+    object-fit: cover; /* Ensures images fit within the dimensions without stretching */
 }
 
 .genre-name {
-    margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: var(--text-color-primary);
+    margin-top: 10px;
+}
+
+/* Ensure the genre items have a uniform height */
+.genre-item {
+    flex-grow: 1;
 }
